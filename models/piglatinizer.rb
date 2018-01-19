@@ -12,7 +12,6 @@ class PigLatinizer
                           'sch','scr','shr','sph','spl','spr','squ','str','thr']
     consonants_cluster_upcase = consonants_cluster.map{|l| l.capitalize }
 
-
       if consonants_cluster.include?(text[0..2]) || consonants_cluster_upcase.include?(text[0..2])
         letter = text.slice!(0..2)
         text = text + letter + "ay"
