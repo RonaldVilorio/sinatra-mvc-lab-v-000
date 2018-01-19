@@ -10,7 +10,7 @@ class PigLatinizer
     consonants_cluster = ['bl','br','ch','cl','cr','dr','fl','fr','gl','gr','pl','pr','sc',
                           'sh','sk','sl','sm','sn','sp','st','sw','th','tr','tw','wh','wr',
                           'sch','scr','shr','sph','spl','spr','squ','str','thr']
-    consonants_cluster_upcase = consonants_cluster.map{|l| l[0].upcase  }
+    consonants_cluster_upcase = consonants_cluster.map{|l| l = l[0].upcase  }
 
       if consonants_cluster.include?(text[0..2]) || consonants_cluster_upcase.include?(text[0..2])
         letter = text.slice!(0..2)
