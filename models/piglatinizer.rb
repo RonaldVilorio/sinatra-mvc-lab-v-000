@@ -15,7 +15,7 @@ class PigLatinizer
       if consonants_cluster.include?(text[0..2]) || consonants_cluster_upcase.include?(text[0..2])
         letter = text.slice!(0..2)
         text = text + letter + "ay"
-        binding.pry
+      
       elsif consonants_cluster.include?(text[0..1])
         letter = text.slice!(0..1)
         text = text + letter + "ay"
